@@ -637,7 +637,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " }}}
 
 " Appearance {{{
-exe 'source' "$DOTFILES/machines/$HOST_NAME/colorscheme.vim"
+exe 'source' "$DOTFILES/colorscheme.vim"
 exe 'source' stdpath('config') . '/lightline.vim'
 
 highlight clear IncSearch
