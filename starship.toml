@@ -3,11 +3,35 @@
 add_newline = false
 command_timeout = 2000
 
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+[username]
+style_user = "green bold"
+style_root = "black bold"
+format = "user: [$user]($style) "
+disabled = true
+show_always = true
+
 [package]
 disabled = true
 
 [directory]
 style = "bold bright-blue"
+truncation_length = 8
+truncation_symbol = "…/"
+format = "[:$path]($style)[$read_only]($read_only_style) "
+
+[hostname]
+ssh_only = true
+format =  "on [$hostname](bold red) "
+trim_at = ""
+disabled = false
 
 [git_branch]
 style = "bold bright-white"
@@ -38,3 +62,9 @@ symbol = " "
 
 [python]
 symbol = " "
+
+[time]
+time_format = "%T"
+format = "🕙 $time($style) "
+style = "bright-white"
+disabled = true
